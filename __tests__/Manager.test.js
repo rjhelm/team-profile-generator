@@ -2,7 +2,7 @@ const { expect, test } = require('@jest/globals');
 const Manager = require('../lib/Manager');
 const { expectToBe, expectNumber, expectString } = require('../utils/expect');
 
-const manager = new Manager('John', 'James', 1, 1);
+const manager = new Manager('John', 'James', 1, 555);
 
 test('Creates manager as an object', () => {
     expectToBe(manager.firstName, 'John');
