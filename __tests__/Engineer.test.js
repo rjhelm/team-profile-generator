@@ -1,4 +1,4 @@
-const { test } = require('@jest/globals');
+
 const Engineer = require('../lib/Engineer');
 const { expectToBe, expectNumber, expectString } = require('../utils/expect');
 
@@ -13,4 +13,22 @@ test('Create an engineer as object', () => {
     expectToBe(engineer.icon, 'fas fa-glasses');  
  });
 
- 
+ test("Get engineer's name", () => {
+    expectString(engineer.getName(), `${engineer.firstName} ${engineer.lastName}`);
+});
+
+test("Get engineer's ID", () => {
+    expectString(engineer.getId(), `${engineer.id}`);
+});
+
+test("Get engineer's email", () => {
+    expectString(engineer.getEmail(), engineer.email);
+});
+
+test("Get engineer's role", () => {
+    expectString(engineer.getRole(), engineer.role);
+});
+
+test("Get engineer's icon", () => {
+    expectString(engineer.getIcon(), engineer.icon);
+});
