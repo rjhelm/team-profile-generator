@@ -43,5 +43,4 @@ const questions = [
         default: true
     }
 
-
 ]
