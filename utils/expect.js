@@ -1,6 +1,6 @@
 const { expect } = require("@jest/globals")
 
-const expectToBe = (obj, val) => {
+const expectToBe = (obj, value) => {
     expect(obj).toBe(value);
 };
 
