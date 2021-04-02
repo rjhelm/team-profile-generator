@@ -12,3 +12,6 @@ test('Create an epmloyee as object', () => {
    expectToBe(employee.icon, 'fas fa-briefcase');  
 });
 
+test("Get employee's name", () => {
+    expectString(employee.getName(), `${employee.firstName} ${employee.lastName}`);
+});
