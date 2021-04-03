@@ -20,7 +20,15 @@ const questions = [
     {
         type: 'input',
         name: 'firstName',
-        message: ''
+        message: ({ role }) => `What is the ${role.toLowerCase()}'s first name?`,
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log("Please enter this employee's first name!");
+                return false;
+            }
+        }
         
     },
     {
