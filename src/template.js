@@ -50,4 +50,33 @@ const addEmployee = employeeInfo => {
             </div>`
     });
     return cards;
+};
+
+const generate = userTemplate => {
+    return `
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>My Team Profile</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+        </head>
+
+        <body>
+            <section>
+            <main>
+                <div>
+                    ${addEmployee(userTemplate)}
+                </div>
+            </section>
+            </main>
+        </body>
+        </html>
+    `;
 }
+
+module.exports = generate;
