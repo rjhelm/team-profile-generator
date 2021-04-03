@@ -9,8 +9,7 @@ test('Create an intern as object', () => {
     expectNumber(intern.id);
     expectString(intern.email, '@');
     expectToBe(intern.role, 'Intern')
-    expectToBe(intern.school, 'Utah');
-    expectToBe(intern.icon, 'fas fa-graduation-cap');  
+    expectToBe(intern.school, 'Utah'); 
  });
 
  test("Get intern's name", () => {
@@ -31,8 +30,4 @@ test("Get intern's role", () => {
 
 test("Gets intern's school", () => {
     expectString(intern.getSchool(), intern.school);
-});
-
-test("Get intern's icon", () => {
-    expectString(intern.getIcon(), intern.icon);
 });

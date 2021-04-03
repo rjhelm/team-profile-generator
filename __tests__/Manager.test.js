@@ -11,7 +11,6 @@ test('Creates manager as an object', () => {
     expectString(manager.email, '@');
     expectToBe(manager.role, 'Manager');
     expectNumber(manager.officeNumber);
-    expectToBe(manager.icon, 'fas fa-mug');
 });
 
 test("Get manager's name", () => {
@@ -32,8 +31,4 @@ test("Get manager's role", () => {
 
 test("Get manager's office number", () => {
     expectString(manager.getOfficeNumber(), `${manager.officeNumber}`);
-});
-
-test("Get manager's icon", () => {
-    expectString(manager.getIcon(), manager.icon);
 });

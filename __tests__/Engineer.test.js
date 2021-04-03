@@ -9,7 +9,6 @@ test('Create an engineer as object', () => {
     expectNumber(engineer.id);
     expectString(engineer.email, '@');
     expectToBe(engineer.role, 'Engineer');
-    expectToBe(engineer.icon, 'fas fa-glasses');  
  });
 
  test("Get engineer's name", () => {
@@ -30,8 +29,4 @@ test("Get engineer's role", () => {
 
 test("Gets engineer's github", () => {
     expectString(engineer.getGithub(), engineer.github);
-});
-
-test("Get engineer's icon", () => {
-    expectString(engineer.getIcon(), engineer.icon);
 });
