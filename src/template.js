@@ -30,23 +30,19 @@ const addEmployee = employeeInfo => {
         };
 
         cards += `
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-4">${addTeamate.getName()}</p>
-                                <p class="subtitle is-6">${addTeanate.getRole()}</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <p>${newEmployee.getId()}<br />
-                            ${newEmployee.getEmail()}<br />
-                            ${extraInfo}</p>
-                        </div>
-                    </div>
+            <div class="card mr-4 ml-4 mb-3">
+                <div class="card-header text-center">
+                    <h2 class="card-title">${addTeamate.getName()}</h2>
+                    <h3 class="-title">${addTeanate.getRole()}</h3>
                 </div>
+            
+
+                <div class="card-body">
+                    <div class="list-group">
+                        <li class="list-group-item">${addTeamate.getId()}<br />
+                            ${addTeamate.getEmail()}<br />
+                         ${userInfo}</li>
+                    </div>
             </div>`
     });
     return cards;
@@ -62,9 +58,10 @@ const generate = userTemplate => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>My Team Profile</title>
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-            <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+                <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         </head>
 
         <body>

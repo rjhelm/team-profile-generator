@@ -9,7 +9,8 @@ test('Create an epmloyee as object', () => {
    expectToBe(employee.lastName, 'James');
    expectNumber(employee.id);
    expectString(employee.email, '@');
-   expectToBe(employee.role, 'Employee');  
+   expectToBe(employee.role, 'Employee');
+   expectToBe(employee.icon, 'fas fa-briefcase');  
 });
 
 test("Get employee's name", () => {
@@ -26,4 +27,8 @@ test("Get employee's email", () => {
 
 test("Get employee's role", () => {
     expectString(employee.getRole(), employee.role);
+});
+
+test("Get employee's icon", () => {
+    expectString(employee.getIcon(), employee.icon);
 });
