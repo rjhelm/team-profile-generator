@@ -62,18 +62,26 @@ const generate = userTemplate => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>My Team Profile</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet">
         </head>
 
         <body>
-            <section>
-            <main>
-                <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 jumbotron mb-3 team-heading">
+                    <h1 class="text-center">My Team</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container"
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mt-5">
                     ${addEmployee(userTemplate)}
                 </div>
-            </section>
-            </main>
+            </div>
+        </div>    
         </body>
         </html>
     `;
