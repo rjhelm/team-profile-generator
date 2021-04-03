@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generate = require('./src/template');
 const nameFormat = require('./utils/name-format');
-const allEmployees = [];
+const yourTeam = [];
 
 const questions = [
     {
@@ -10,7 +10,7 @@ const questions = [
         name: 'role',
         message: "What is the employee's role?",
         choices: () => {
-            if (allEmployees.some(employee => employee.role === 'Manager')) {
+            if (yourTeam.some(employee => employee.role === 'Manager')) {
                 return ['Engineer', 'Intern']
             } else {
                 return ['Manager', 'Engineer', 'Intern']
@@ -100,7 +100,22 @@ const questions = [
     {
         type: 'input',
         name: 'school',
-        message: ''
+        message: ({ firstName }) => `What school does ${nameFormat(firstName)} attend?`,
+        when: ({ role }) => {
+            if (role === 'Intern') {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        validate: schoolInput => {
+            if (schoolInput) {
+                return true;
+            } else {
+                console.log("Please enter a valid school for this employee!");
+                return false;
+            }
+        }
     },
     {
         type: 'confirm',
@@ -110,3 +125,32 @@ const questions = [
     }
 
 ]
+
+const promptUser = () => {
+    return inquirer.prompt(questions)
+    .then(userResponse => {
+        yourTeam.push(userResponse);
+        /* add a team memeber */
+        if (userResponse.addEmployee) {
+            return promptUser();
+        } else {
+            return yourTeam;
+        };
+    });
+};
+
+const writeHtml = (htmlContent) => {
+    fs.writeFile('./dist/index.html', htmlContent, err => {
+        if (err) {
+            throw err
+        };
+        console.log("Your page was succesfully created!");
+    });
+};
+
+console.log(`I hope you enjoy this Team Profile Generator! Let's create your team! Add employee's now!`);
+
+promptUser()
+    .then(data => generate(data))
+    .then(generateHtml => writeHtml(generateHtml))
+    .catch(err => console.log(err));
