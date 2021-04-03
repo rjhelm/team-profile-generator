@@ -34,17 +34,68 @@ const questions = [
     {
         type: 'input',
         name: 'lastName',
-        message: ''
+        message: ({ firstName }) => `What is ${nameFormat(firstName)}'s last name?`,
+        validate: nameInput => {
+            if(nameInput) {
+                return true;
+            } else {
+                console.log("Please enter employee's last name!");
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'id',
+        message: ({ firstName }) => `What is ${nameFormat(firstName)}'s employee ID number?`,
+        validate: idInput => {
+            if (!isNaN(parseInt(idInput))) {
+                return true;
+            } else {
+                console.log("Please enter this employee's valid ID number!");
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'officeNumber',
-        message: ''
+        message: ({ firstName }) => `What is ${nameFormat(firstName)}'s office phone number?`,
+        when: ({ role }) => {
+            if (role === 'Manager') {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        validate: officeNumberInput => {
+            if (!isNaN(parseInt(officeNumberInput))) {
+                return true;
+            } else {
+                console.log("Please enter this employee's valid office phone number!");
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'github',
-        message: ''
+        message: ({ firstName }) => `What is ${nameFormat(firstName)}'s Github username?`,
+        when: ({ role }) => {
+            if (role === 'Engineer') {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log("Please enter a valid Github username for this employee!");
+                return false;
+            }
+        }
     },
     {
         type: 'input',
