@@ -15,7 +15,7 @@ const addEmployee = employeeInfo => {
         switch(role) {
             case 'Manager': 
                 addTeamate = new Manager(nameFormat(firstName), nameFormat(lastName), id, employee.officeNumber);
-                userInfo = addTeamate.officeNumber();
+                userInfo = addTeamate.getOfficeNumber();
                 break;
             case 'Engineer':
                 addTeamate = new Engineer(nameFormat(firstName), nameFormat(lastName), id, employee.github);
@@ -30,19 +30,19 @@ const addEmployee = employeeInfo => {
         };
 
         cards += `
-            <div class="card mr-4 ml-4 mb-3">
-                <div class="card-header text-center">
-                    <h2 class="card-title">${addTeamate.getName()}</h2>
-                    <h3 class="-title">${addTeanate.getRole()}</h3>
-                </div>
-            
-
+            <div class="card team-card mr-4 ml-4 mb-3">
                 <div class="card-body">
+                    <div class="card-header text-center">
+                        <h2 class="card-title">${addTeamate.getName()}</h2>
+                        <h3 class="-title">${addTeamate.getRole()}</h3>
+                    </div>
+                
                     <div class="list-group">
                         <li class="list-group-item">${addTeamate.getId()}<br />
                             ${addTeamate.getEmail()}<br />
                          ${userInfo}</li>
                     </div>
+                </div>
             </div>`
     });
     return cards;
@@ -62,6 +62,7 @@ const generate = userTemplate => {
                     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
                 <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+                <link rel="stylesheet" href="./utils/style.css">
         </head>
 
         <body>
