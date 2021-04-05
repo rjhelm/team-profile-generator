@@ -10,14 +10,14 @@
  
 ## Description
 
-    -"AS A manager
-    I WANT to generate a webpage that displays my team's basic info
-    SO THAT I have quick access to their emails and GitHub profiles"-
+   "AS A manager
+   I WANT to generate a webpage that displays my team's basic info
+   SO THAT I have quick access to their emails and GitHub profiles"-
     
-    With this request in mind, this app was developed to do just that.
-    This app will ask the user about the employee's on their team.
-    They input answers using the terminal, an HTML file is generated with employee profiles in a clean looking card layout.
-    <br />
+   With this request in mind, this app was developed to do just that.
+   This app will ask the user about the employee's on their team.
+   They input answers using the terminal, an HTML file is generated with employee profiles in a clean looking card layout.
+   <br />
 
    [Video Guide]https://drive.google.com/file/d/1-UEeMrgvNtv6cycm7OrFtfNCimdUZtxz/view)
     <br />
@@ -47,9 +47,11 @@
     -School (Intern selected role)
     -Add Another Employee
   
-    [Screenshot](placeholder)
+   Once the user is done adding employee's an HTML document is created, once opened in the browser the user will have an organized layout of all the employees on the team with      clean cards with the employee's information.
+   
+   [Screenshot](https://github.com/rjhelm/team-profile-generator/blob/main/assets/team.PNG?raw=true)
 
-   Once the user is done adding employee's an HTML document is created, once opened in the browser the user will have an organized layout of all the employees on the team with clean cards with the employee's information.
+  
     
     [Screenshot](placeholder)
     
