@@ -49,11 +49,8 @@
   
    Once the user is done adding employee's an HTML document is created, once opened in the browser the user will have an organized layout of all the employees on the team with      clean cards with the employee's information.
    
-   [Screenshot](https://github.com/rjhelm/team-profile-generator/blob/main/assets/team.PNG?raw=true)
+   ![Geneated Team Profile](https://github.com/rjhelm/team-profile-generator/blob/main/assets/team.PNG?raw=true)
 
-  
-    
-    [Screenshot](placeholder)
     
    ## Contributions
    Ryan Helm
