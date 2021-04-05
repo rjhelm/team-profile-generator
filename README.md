@@ -35,15 +35,29 @@
    -npm install inquirer
 
   ## Usage
-   
+   This app is a great way to quickly and easily create profiles for members of a team.
+   The user only has to answer a series of questions about the employee and the program will save the information that is input.
+   The user answers the following:
+    -Employee's Role (Manger, Engineer, Intern)
+    -First Name
+    -Last Name
+    -Employee ID
+    -Office Number (Manger selected Role)
+    -Github Username (Engineer selected Role)
+    -School (Intern selected role)
+    -Add Another Employee
+  
     [Screenshot](placeholder)
+
+   Once the user is done adding employee's an HTML document is created, once opened in the browser the user will have an organized layout of all the employees on the team with clean cards with the employee's information.
+    
     [Screenshot](placeholder)
-    [Screenshot](placeholder)
+    
    ## Contributions
    Ryan Helm
 
    ## Questions
-   Contact me using gihub or email
+   Any questions can be directed to me using github or you can email me.
     <br />
     :octocat: My GitHub: [rjhelm]((https://github.com/rjhelm)<br />
     <br />
